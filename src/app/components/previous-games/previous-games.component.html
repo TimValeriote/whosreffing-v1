@@ -1,0 +1,36 @@
+<div class="header">
+	<p>Select a date:</p>
+</div>
+<div class="selectControls">
+	<input type="date" [(ngModel)]="date">
+	<button (click)="viewGames()">View Games</button>
+</div>
+<div class="warningText" *ngIf="error">
+	<p class="text-danger">No games on this date or the date is in the future</p>
+</div>
+<div>
+	<ng-container *ngFor="let league of leagues$ | async">
+		<div *ngIf="(previousGamesMap.get(league.id) | async)?.length!=0">
+		  <div class="gamesListHeader">
+		    <h4 class="gameHeader">{{league.id}} games:</h4>
+		    <a class="collapseTag" href="#{{league.id}}games" data-bs-toggle="collapse" role="button">&#8650;</a>
+		  </div>
+		  <div id="{{league.id}}games" class="collapse show">
+		    <div class="gamesList">
+		      <div *ngFor="let game of (previousGamesMap.get(league.id) | async)">
+		        <h6>{{game.visiting_team.city}} vs {{game.home_team.city}} @ {{game.venue}}
+		        <a href="{{createLink(league.id, game.id)}}" target="_blank">Game Sheet</a></h6>
+		        <div *ngIf="hasOfficials(game)">
+		          <div *ngFor="let ref of game.officials">
+		             <p class="indivRef">{{ref.official_type}}: <a routerLink="/official-page/{{ref.first_name}}_{{ref.last_name}}">{{ref.first_name}} {{ref.last_name}}</a></p>
+		          </div>
+		        </div>
+		        <div *ngIf="!hasOfficials(game)">
+		          <p>No refs available for this game</p>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</ng-container>
+</div>

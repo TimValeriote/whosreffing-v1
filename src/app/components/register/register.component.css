@@ -1,0 +1,24 @@
+button {
+	background-color: #fc5903;
+	width: auto;
+	border: 1.5px solid #c3c3c3;
+    color: #313131;
+    height: 45px;
+    width: 80%;
+}
+
+input {
+	margin-left: 0px;
+	background-color: #313131;
+    color: #c3c3c3;
+    border: 3px solid;
+    width: 80%;
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

@@ -1,0 +1,59 @@
+@media (min-width: 769px) {
+	.gamesList {
+		display: grid;
+    	grid-template-columns: 1fr 1fr;
+	}
+}
+
+.gameHeader {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.collapseTag {
+	color: #c3c3c3;
+	color: #111111;
+  	text-decoration: none;
+  	font-size: 30px;
+}
+
+.collapseTag:hover {
+	color: #fc5903;
+}
+
+.gamesListHeader {
+	display: block;
+}
+
+.refInfo {
+	display: flex;
+	flex-direction: column;
+}
+
+.refInfoPhoto {
+	width: 150px;
+	height: 150px;
+	border-radius: 25px;
+}
+
+.refNamePhoto {
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+}
+
+.refTextInfo {
+	margin-left: 20px;
+}
+
+.news {
+	margin-bottom: 0px;
+}
+
+.indivRef {
+	margin-bottom: 0.5rem;
+}
+
+a {
+	color: #fc5903;
+}

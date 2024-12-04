@@ -1,0 +1,79 @@
+@media (min-width: 769px) {
+	.gamesList {
+		display: grid;
+    	grid-template-columns: 1fr 1fr;
+	}
+
+	.selectControls button {
+		margin-left: 10px;
+		background-color: #fc5903;
+		padding: 5px;
+		width: 100px;
+		display: inline-block;
+		height: 40px;
+	}
+	.selectControls input {
+		width: 160px;
+		height: 40px;
+	}
+}
+
+@media (max-width: 769px) { 
+	.selectControls {
+		text-align: center;
+	}
+	.header {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.gameHeader {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.collapseTag {
+	color: #c3c3c3;
+  	text-decoration: none;
+  	font-size: 30px;
+}
+
+.collapseTag:hover {
+	color: #fc5903;
+}
+
+.gamesListHeader {
+	display: block;
+}
+
+.selectControls button {
+	margin-left: 10px;
+	background-color: #fc5903;
+	padding: 5px;
+	width: 150px;
+	display: inline;
+	height: 40px;
+}
+
+.selectControls input {
+	width: 160px;
+	height: 40px;
+	margin-left: 0px;
+	background-color: #313131;
+    color: #c3c3c3;
+    border: 3px solid;
+}
+
+a {
+    color: #c3c3c3;
+}
+
+.indivRef {
+	margin-bottom: 0.5rem;
+}
+
+.rank {
+	width: 75px; 
+	text-align:center;
+}

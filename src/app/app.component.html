@@ -1,0 +1,48 @@
+<nav id="navBar" class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
+    <div class="container-fluid">
+      <img src="assets/logo.png" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" (click)="clearSearch()"></span>
+      </button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <div class="refSearch" *ngIf="screenWidth <= 769">
+            <input name="search"  type="search" (focus)="showSearch = true" placeholder="Search for refs" autocomplete="off" [(ngModel)]="term">
+            <div class="refSearchResults" *ngIf="showSearch && term != ''">
+                <table style="width: 100%">
+                    <tbody>
+                        <tr *ngFor="let ref of allRefs | async | officialfilter:term">
+                            <td><a routerLink="/official-page/{{ref.first_name}}_{{ref.last_name}}" (click)="clearSearch()">{{ref.first_name}}</a></td>
+                            <td><a routerLink="/official-page/{{ref.first_name}}_{{ref.last_name}}" (click)="clearSearch()">{{ref.last_name}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <ng-container *ngIf="screenWidth <= 769">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="clearSearch()"><a routerLink="/" class="nav-link font-weight-bold text-uppercase">Home</a></li>
+              <li class="nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="clearSearch()"><a routerLink="/ref-hub" class="nav-link font-weight-bold text-uppercase">Find Referees</a></li>
+              <li class="nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="clearSearch()"><a routerLink="/standings" class="nav-link font-weight-bold text-uppercase">Referee Standings</a></li>
+              <li class="nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="clearSearch()"><a routerLink="/previous-games" class="nav-link font-weight-bold text-uppercase">Find Previous Games</a></li>
+              <li class="nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="clearSearch()"><a routerLink="/post-season-report" class="nav-link font-weight-bold text-uppercase">Post Season Report</a></li>
+              <li class="nav-item" (click)="clearSearch()"><a href="https://whosreffing.deco-apparel.com/" class="nav-link font-weight-bold text-uppercase">Store</a></li>
+              <li class="nav-item" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="clearSearch()"><a routerLink="/info" class="nav-link font-weight-bold text-uppercase">Additional Info</a></li>
+            </ul>
+        </ng-container>
+        <ng-container *ngIf="screenWidth >= 770">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a routerLink="/" class="nav-link font-weight-bold text-uppercase">Home</a></li>
+              <li class="nav-item"><a routerLink="/ref-hub" class="nav-link font-weight-bold text-uppercase">Find Referees</a></li>
+              <li class="nav-item"><a routerLink="/standings" class="nav-link font-weight-bold text-uppercase">Referee Standings</a></li>
+              <li class="nav-item"><a routerLink="/previous-games" class="nav-link font-weight-bold text-uppercase">Find Previous Games</a></li>
+              <li class="nav-item"><a routerLink="/post-season-report" class="nav-link font-weight-bold text-uppercase">Post Season Report</a></li>
+              <li class="nav-item"><a href="https://whosreffing.deco-apparel.com/" class="nav-link font-weight-bold text-uppercase">Store</a></li>
+              <li class="nav-item"><a routerLink="/info" class="nav-link font-weight-bold text-uppercase">Additional Info</a></li>
+            </ul>
+        </ng-container>       
+      </div>
+    </div>
+  </nav>
+<div class="siteContent">
+	<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,705 @@
+<div style="margin-bottom: 16px;">
+	<h4>Post Season Report</h4>
+	<h6>Regular season only (must have a minimum of 5 games to be included)</h6>
+</div>
+<div class="leagueButtons">
+    <button (click)="toggleDiv('ohl')" [ngClass]="{'button-clicked': ohlVisible, 'button-default': !ohlVisible}">OHL</button>
+    <button (click)="toggleDiv('gojhl')" [ngClass]="{'button-clicked': gojhlVisible, 'button-default': !gojhlVisible}">GOJHL</button>
+    <button (click)="toggleDiv('pjhl')" [ngClass]="{'button-clicked': pjhlVisible, 'button-default': !pjhlVisible}">PJHL</button>
+    <button (click)="toggleDiv('ojhl')" [ngClass]="{'button-clicked': ojhlVisible, 'button-default': !ojhlVisible}">OJHL</button>
+</div>
+<div style="margin-bottom: 16px; margin-top: 16px;">
+	<h6 style="font-size: 14px;">More leagues will be added as their seasons wrap up</h6>
+</div>
+<div id="gojhl" *ngIf="gojhlVisible">
+	<p>Game Leaders:</p>
+	<ol>
+		<li>Josh Wall: 31 games</li>
+	    <li>Peter Kostyk: 30 games</li>
+	    <li>Dillon Hastings: 26 games</li>
+	    <li>Wyatt Weppler: 23 games</li>
+	    <li>Ian Rush: 22 games</li>
+	</ol>
+	<p>Longest Avg Game Length:</p>
+	<ol>
+		<li>Dean Emerson: 2:16 </li>
+    	<li>Dylan Martins: 2:14</li>
+    	<li>Nick Schwab: 2:14</li>
+    	<li>Brandon Flood: 2:13</li>
+    	<li>Chris Harwood: 2:13</li>
+	</ol>
+
+	<p>Shortest Avg Game Length:</p>
+	<ol>
+		<li>Devon Driscoll: 1:57</li>
+        <li>Ryan Cochrane: 1:58</li>
+        <li>Brandon Brubacher: 1:58</li>
+        <li>Connor Davis: 1:58</li>
+        <li>Hillory Brennan: 1:58</li>
+	</ol>
+
+
+	<p>Most Avg Pims Per Game:</p>
+	<ol>
+		<li>David Black: 58 pims</li>
+        <li>Chris Harwood: 57 pims</li>
+        <li>Mike Taylor: 57 pims</li>
+        <li>Justin Webb: 54 pims</li>
+        <li>Tyler Ferguson: 53 pims</li>
+	</ol>
+
+	<p>Least Avg Pims Per Game:</p>
+	<ol>
+		<li>Mitch Muhvic: 22 pims</li>
+        <li>Drew Ramsden: 22 pims</li>
+        <li>Cory Hooper: 22 pims</li>
+        <li>Ryan Styles: 23 pims</li>
+        <li>Rob Cowan: 23 pims</li>
+	</ol>
+	<p>5 Games With Most Pims: </p>
+	<ol>
+        <li>Dec 19: Fort Erie Meteors vs Port Colborne Sailors - 199 pims <a href="{{createLink('gojhl', 13445)}}" target="_blank">GameSheet</a></li>
+        <li>Feb 19: Caledonia Corvairs vs St. Catharines Falcons - 198 pims <a href="{{createLink('gojhl', 13639)}}" target="_blank">GameSheet</a></li>
+        <li>Dec 10: Pelham Panthers vs Caledonia Corvairs - 188 pims <a href="{{createLink('gojhl', 13416)}}" target="_blank">GameSheet</a></li>
+        <li>Jan 7: Chatham Maroons vs Strathroy Rockets - 124 pims <a href="{{createLink('gojhl', 13487)}}" target="_blank">GameSheet</a></li>
+        <li>Dec 14: Ayr Centennials vs St. Catharines Falcons - 122 pims <a href="{{createLink('gojhl', 13425)}}" target="_blank">GameSheet</a></li>
+    </ol>
+	<p>5 Longest Games: </p>
+	<ol>
+	    <li>Sep 20: 2:47 - LaSalle Vipers vs Chatham Maroons <a href="{{createLink('gojhl', 13133)}}" target="_blank">GameSheet</a></li>
+	    <li>Nov 25: 2:35 - Fort Erie Meteors vs Hamilton Kilty B's <a href="{{createLink('gojhl', 13366)}}" target="_blank">GameSheet</a></li>
+	    <li>Jan 13: 2:35 - Strathroy Rockets vs London Nationals <a href="{{createLink('gojhl', 13505)}}" target="_blank">GameSheet</a></li>
+	    <li>Oct 28: 2:34 - Caledonia Corvairs vs St. Catharines Falcons <a href="{{createLink('gojhl', 13271)}}" target="_blank">GameSheet</a></li>
+	    <li>Sep 15: 2:33 - St. Catharines Falcons vs Caledonia Corvairs <a href="{{createLink('gojhl', 13114)}}" target="_blank">GameSheet</a></li>
+	</ol>
+</div>
+
+<div id="pjhl" *ngIf="pjhlVisible">
+    <p>Game Leaders:</p>
+    <ol>
+        <li>Cheyenne Batten: 33 games</li>
+        <li>Cody DiDomenico: 32 games</li>
+        <li>Ian Waugh: 29 games</li>
+        <li>Travis Ford: 28 games</li>
+        <li>David Skrabek: 28 games</li>
+    </ol>
+    <p>Longest Avg Game Length:</p>
+    <ol>
+	    <li>Owen Polan: 2:11</li>
+	    <li>Tim White: 2:11</li>
+	    <li>Kyle Kennery: 2:11</li>
+	    <li>Mario Simone: 2:11</li>
+	    <li>Alex Morra: 2:10</li>
+	</ol>
+
+    <p>Shortest Avg Game Length:</p>
+    <ol>
+        <li>Jeff Dancy: 1:46</li>
+        <li>Scott McTrach: 1:53</li>
+        <li>Owen Robertson: 1:53</li>
+        <li>Luken Van Pelt: 1:53</li>
+        <li>Jake Gansevles: 1:54</li>
+    </ol>
+
+    <p>Most Avg Pims Per Game:</p>
+    <ol>
+        <li>Mitch Muhvic: 61 pims</li>
+        <li>Alec Cooke: 59 pims</li>
+        <li>Jeff Dancy: 56 pims</li>
+        <li>Kyle Kennery: 55 pims</li>
+        <li>Mario Simone: 54 pims</li>
+    </ol>
+
+    <p>Least Avg Pims Per Game:</p>
+    <ol>
+        <li>Kyle Droge: 17 pims</li>
+        <li>Dakoda Pare: 21 pims</li>
+        <li>Dylan Whitbread: 24 pims</li>
+        <li>Steve Carter: 24 pims</li>
+        <li>Kevin McArthur: 24 pims</li>
+    </ol>
+
+    <p>Top 5 Games With Most Pims:</p>
+    <ol>
+        <li>Feb 4: Georgina Ice vs Uxbridge Bruins - 183 pims <a href="{{createLink('pjhl', 12604)}}" target="_blank">GameSheet</a></li>
+        <li>Nov 14: Essex 73s vs Dresden Kings - 157 pims <a href="{{createLink('pjhl', 12368)}}" target="_blank">GameSheet</a></li>
+        <li>Nov 10: Lakeshore Canadiens vs Blenheim Blades - 156 pims <a href="{{createLink('pjhl', 12459)}}" target="_blank">GameSheet</a></li>
+        <li>Dec 14: Clarington Eagles vs Little Britain Merchants - 142 pims <a href="{{createLink('pjhl', 12557)}}" target="_blank">GameSheet</a></li>
+        <li>Dec 17: Port Perry Lumberjacks vs Georgina Ice - 136 pims <a href="{{createLink('pjhl', 12562)}}" target="_blank">GameSheet</a></li>
+    </ol>
+
+    <p>Top 5 Longest Games:</p>
+    <ol>
+        <li>Nov 15: 3:01 - Dorchester Dolphins vs Mt. Brydges Bulldogs <a href="{{createLink('pjhl', 12702)}}" target="_blank">GameSheet</a></li>
+        <li>Sep 16: 3:00 - Mt. Brydges Bulldogs vs Thamesford Trojans <a href="{{createLink('pjhl', 12632)}}" target="_blank">GameSheet</a></li>
+        <li>Jan 2: 2:51 - Essex 73s vs Blenheim Blades <a href="{{createLink('pjhl', 12413)}}" target="_blank">GameSheet</a></li>
+        <li>Sep 17: 2:49 - Hespeler Shamrocks vs Tavistock Braves <a href="{{createLink('pjhl', 12090)}}" target="_blank">GameSheet</a></li>
+        <li>Nov 17: 2:40 - Fergus Whalers vs Mitchell Hawks <a href="{{createLink('pjhl', 11795)}}" target="_blank">GameSheet</a></li>
+    </ol>
+</div>
+
+<div id="ojhl" *ngIf="ojhlVisible">
+    <p>Game Leaders:</p>
+    <ol>
+        <li>Shane Steenhoek: 19 games</li>
+        <li>Youl Han: 19 games</li>
+        <li>Pierre-Luc Lurette: 18 games</li>
+        <li>Eric Taylor: 18 games</li>
+        <li>Steve Gallagher: 17 games</li>
+    </ol>
+    <p>Longest Avg Game Length:</p>
+    <ol>
+        <li>Eric Robertson: 2:24</li>
+        <li>Stephen O'Reilly: 2:22</li>
+        <li>Rob Kennedy: 2:22</li>
+        <li>Ryan Jackson: 2:20</li>
+        <li>Meckenzie Wright: 2:20</li>
+    </ol>
+
+    <p>Shortest Avg Game Length:</p>
+    <ol>
+        <li>Cody Palm: 1:59</li>
+        <li>Phillip Manning: 2:00</li>
+        <li>Josh Feijo: 2:00</li>
+        <li>Dylan Rogers: 2:03</li>
+        <li>Brian Kimmins: 2:03</li>
+    </ol>
+
+    <p>Most Avg Pims Per Game:</p>
+    <ol>
+        <li>Brendan Kane: 45 pims</li>
+        <li>Tyler Ferguson: 44 pims</li>
+        <li>Ryan Styles: 40 pims</li>
+        <li>Matt Perreault: 39 pims</li>
+        <li>Steven Picco: 37 pims</li>
+    </ol>
+
+    <p>Least Avg Pims Per Game:</p>
+    <ol>
+        <li>Josh Wall: 13 pims</li>
+        <li>Sean Kimmerly: 17 pims</li>
+        <li>Dillon Hastings: 17 pims</li>
+        <li>Travis Ford: 17 pims</li>
+        <li>Kyle Vermast: 18 pims</li>
+    </ol>
+
+    <p>Top 5 Games With Most Pims:</p>
+    <ol>
+        <li>Nov 24: Collingwood Blues vs Toronto Patriots - 149 pims <a href="{{createLink('ojhl', 389)}}" target="_blank">GameSheet</a></li>
+        <li>Jan 19: Milton Menace vs Mississauga Chargers - 124 pims <a href="{{createLink('ojhl', 562)}}" target="_blank">GameSheet</a></li>
+        <li>Dec 16: Mississauga Chargers vs Milton Menace - 113 pims <a href="{{createLink('ojhl', 482)}}" target="_blank">GameSheet</a></li>
+        <li>Feb 19: Collingwood Blues vs Wellington Dukes - 110 pims <a href="{{createLink('ojhl', 687)}}" target="_blank">GameSheet</a></li>
+        <li>Oct 28: Georgetown Raiders vs Brantford 99ers - 94 pims <a href="{{createLink('ojhl', 292)}}" target="_blank">GameSheet</a></li>
+    </ol>
+
+    <p>Top 5 Longest Games:</p>
+    <ol>
+        <li>Feb 9: 3:16 - Burlington Cougars vs Milton Menace <a href="{{createLink('ojhl', 649)}}" target="_blank">GameSheet</a></li>
+        <li>Feb 23: 3:08 - Trenton Golden Hawks vs Toronto Jr. Canadiens <a href="{{createLink('ojhl', 704)}}" target="_blank">GameSheet</a></li>
+        <li>Jan 31: 2:50 - Cobourg Cougars vs Lindsay Muskies <a href="{{createLink('ojhl', 612)}}" target="_blank">GameSheet</a></li>
+        <li>Oct 22: 2:50 - Milton Menace vs Toronto Patriots <a href="{{createLink('ojhl', 269)}}" target="_blank">GameSheet</a></li>
+        <li>Jan 28: 2:46 - Niagara Falls Canucks vs Cobourg Cougars <a href="{{createLink('ojhl', 603)}}" target="_blank">GameSheet</a></li>
+    </ol>
+</div>
+
+<div id="ohl" *ngIf="ohlVisible">
+    <p>Selected officials for OHL playoffs:</p>
+    <table class="faceoffTable">
+  <thead class="tableHeader">
+    <tr class="headerRow">
+      <th class="tableHeaderPadding">Referees</th>
+      <th class="tableHeaderPadding">Linesman</th>
+    </tr>
+  </thead>
+  <tbody class="tableBody">
+    <tr>
+      <td>Beer, Blake</td>
+      <td>Arcan, Nick</td>
+    </tr>
+    <tr>
+      <td>Bet, Nicholas</td>
+      <td>Birkoff, Brian</td>
+    </tr>
+    <tr>
+      <td>Boulby, Matt</td>
+      <td>Burnett, Adam</td>
+    </tr>
+    <tr>
+      <td>Burchell, Darcy</td>
+      <td>Burton, Jarrett</td>
+    </tr>
+    <tr>
+      <td>Cairns, Michael</td>
+      <td>Card, Ryan</td>
+    </tr>
+    <tr>
+      <td>Elbers, Ryan</td>
+      <td>Cornell, Justin</td>
+    </tr>
+    <tr>
+      <td>Faist, Jason</td>
+      <td>Dykeman, Will</td>
+    </tr>
+    <tr>
+      <td>Ferguson, Scott</td>
+      <td>Gagne, Zach</td>
+    </tr>
+    <tr>
+      <td>Harrison, Ryan</td>
+      <td>Gale, Devon</td>
+    </tr>
+    <tr>
+      <td>Ingalls, Chad</td>
+      <td>Giesler, Charlie</td>
+    </tr>
+    <tr>
+      <td>Jackson, Drew</td>
+      <td>Grougrou, Andre</td>
+    </tr>
+    <tr>
+      <td>Kane, Brendan</td>
+      <td>Harris, Adam</td>
+    </tr>
+    <tr>
+      <td>Kimberly, Sean</td>
+      <td>Heaman, Brett</td>
+    </tr>
+    <tr>
+      <td>Lewis, Dave</td>
+      <td>Horan, Brian</td>
+    </tr>
+    <tr>
+      <td>Monette, Joe</td>
+      <td>Hunter, Timothy</td>
+    </tr>
+    <tr>
+      <td>Myers, Pat</td>
+      <td>Hurtubise, Jordan</td>
+    </tr>
+    <tr>
+      <td>Neely, Aaron</td>
+      <td>Kielbowich, Joe</td>
+    </tr>
+    <tr>
+      <td>Nichol, Mac</td>
+      <td>King, Ray</td>
+    </tr>
+    <tr>
+      <td>Reid, Sean</td>
+      <td>Kipp, Dalton</td>
+    </tr>
+    <tr>
+      <td>Seniuk, Lacey</td>
+      <td>Knox, Spencer</td>
+    </tr>
+    <tr>
+      <td>Stewart, Tyson</td>
+      <td>Lamothe, Jacob</td>
+    </tr>
+    <tr>
+      <td>Wilmets, Andrew</td>
+      <td>Lawson, Scott</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>McArthur, Kevin</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>McCrank, Dustin</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Millen, Charlie</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Miller, Troy</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Milne, David</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Noble, Justin</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Oliver, Shawn</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Pare, Kurtis</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Peacock, Tristan</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Policicchio, Marcus</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Pye, Luke</td>
+    </tr>
+  </tbody>
+</table>
+
+    <p>Game Leaders:</p>
+    <ol>
+        <li>Ryan Elbers: 51 games</li>
+        <li>Joe Monette: 49 games</li>
+        <li>Aaron Neely: 49 games</li>
+        <li>Drew Jackson: 49 games</li>
+        <li>Mike Cairns: 48 games</li>
+    </ol>
+
+    <p>Total Game Counts Are Below</p>
+
+    <p>Longest Avg Game Length:</p>
+    <ol>
+        <li>Jean-Francois Menard: 2:30</li>
+        <li>Mason Hardy: 2:27</li>
+        <li>Luke Pye: 2:27</li>
+        <li>Jason Faist: 2:27</li>
+        <li>Andre Grougrou: 2:26</li>
+    </ol>
+
+    <p>Shortest Avg Game Length:</p>
+    <ol>
+        <li>Carter Tait: 2:16</li>
+        <li>Ian Rush: 2:19</li>
+        <li>Charlie Giesler: 2:19</li>
+        <li>Justin Cornell: 2:19</li>
+        <li>Joshua Houslander: 2:20</li>
+    </ol>
+
+    <p>Most Avg Pims Per Game:</p>
+    <ol>
+        <li>Jason Faist: 31.88 pims</li>
+        <li>Jesse Wilmot: 29.20 pims</li>
+        <li>Sean Kimmerly: 28.91 pims</li>
+        <li>Dave Lewis: 28.35 pims</li>
+        <li>Scott Ferguson: 26.66 pims</li>
+    </ol>
+
+    <p>Least Avg Pims Per Game:</p>
+    <ol>
+        <li>Jack Hennigan: 20.31 pims</li>
+        <li>Chad Ingalls: 20.39 pims</li>
+        <li>Sean Reid: 20.80 pims</li>
+        <li>Drew Jackson: 20.84 pims</li>
+        <li>Ryan Jenken: 21.53 pims</li>
+    </ol>
+
+    <h6>For the next two sections, we do need to consider that faceoff wins are not tracked by which linesman conducted the faceoff.</h6>
+    <h6>So in reality, the true numbers would be half of what is presented, but the percentages would still hold.</h6>
+
+    <p>5 Most Bias Linesman regarding faceoffs:</p>
+    <table class="faceoffTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total</th>
+                <th>H Wins</th>
+                <th>V Wins</th>
+                <th>H %</th>
+                <th>V %</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dalton Kipp</td>
+                <td>731</td>
+                <td>425</td>
+                <td>306</td>
+                <td>58.1%</td>
+                <td>41.9%</td>
+            </tr>
+            <tr>
+                <td>Justine Todd</td>
+                <td>1257</td>
+                <td>713</td>
+                <td>544</td>
+                <td>56.7%</td>
+                <td>43.3%</td>
+            </tr>
+            <tr>
+                <td>Marco Lizotte</td>
+                <td>650</td>
+                <td>363</td>
+                <td>287</td>
+                <td>55.9%</td>
+                <td>44.1%</td>
+            </tr>
+            <tr>
+                <td>Riley Brass</td>
+                <td>1159</td>
+                <td>647</td>
+                <td>512</td>
+                <td>55.8%</td>
+                <td>44.2%</td>
+            </tr>
+            <tr>
+                <td>Riley Page</td>
+                <td>582</td>
+                <td>324</td>
+                <td>258</td>
+                <td>55.7%</td>
+                <td>44.3%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>5 Least Bias Linesman regarding faceoffs:</p>
+    <table class="faceoffTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total</th>
+                <th>H Wins</th>
+                <th>V Wins</th>
+                <th>H %</th>
+                <th>V %</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Brendan Barletta</td>
+                <td>930</td>
+                <td>463</td>
+                <td>467</td>
+                <td>49.8%</td>
+                <td>50.2%</td>
+            </tr>
+            <tr>
+                <td>Devon Gale</td>
+
+                <td>1010</td>
+                <td>463</td>
+                <td>467</td>
+                <td>49.6%</td>
+                <td>50.4%</td>
+            </tr>
+            <tr>
+                <td>Kurtis Pare</td>
+                <td>2071</td>
+                <td>1046</td>
+                <td>1025</td>
+                <td>50.5%</td>
+                <td>49.5%</td>
+            </tr>
+            <tr>
+                <td>Adam Burnett</td>
+                <td>2682</td>
+                <td>1361</td>
+                <td>1321</td>
+                <td>50.7%</td>
+                <td>49.3%</td>
+            </tr>
+            <tr>
+                <td>Alex Joubert</td>
+                <td>1112</td>
+                <td>566</td>
+                <td>546</td>
+                <td>50.9%</td>
+                <td>49.1%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h6>For the next two sections, we do need to consider a similar fact: the league does not track which official calls the penalty.</h6>
+    <h6>These are power plays, not penalty minutes; they are specific to when a team (home or away) was given a man advantage</h6>
+    <h6>See at bottom of the page for all referees</h6>
+
+    <p>5 Most Bias Referees regarding powerplays:</p>
+    <table class="faceoffTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total</th>
+                <th>H PPs</th>
+                <th>V PPs</th>
+                <th>H %</th>
+                <th>V %</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Blake Beer</td>
+                <td>296</td>
+                <td>133</td>
+                <td>163</td>
+                <td>44.9%</td>
+                <td>55.1%</td>
+            </tr>
+            <tr>
+                <td>Cameron Fynney</td>
+                <td>166</td>
+                <td>75</td>
+                <td>91</td>
+                <td>45.2%</td>
+                <td>54.8%</td>
+            </tr>
+            <tr>
+                <td>Drew Jackson</td>
+                <td>340</td>
+                <td>186</td>
+                <td>154</td>
+                <td>54.7%</td>
+                <td>45.3%</td>
+            </tr>
+            <tr>
+                <td>Ryan Elbers</td>
+                <td>376</td>
+                <td>205</td>
+                <td>171</td>
+                <td>54.5%</td>
+                <td>45.5%</td>
+            </tr>
+            <tr>
+                <td>Kevin McArthur</td>
+                <td>88</td>
+                <td>48</td>
+                <td>40</td>
+                <td>54.5%</td>
+                <td>45.5%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>5 Least Bias Referees regarding powerplays:</p>
+    <table class="faceoffTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total</th>
+                <th>H PPs</th>
+                <th>V PPs</th>
+                <th>H %</th>
+                <th>V %</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sean Reid</td>
+                <td>278</td>
+                <td>139</td>
+                <td>139</td>
+                <td>50%</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>Mike Cairns</td>
+                <td>353</td>
+                <td>176</td>
+                <td>177</td>
+                <td>49.9%</td>
+                <td>50.1%</td>
+            </tr>
+            <tr>
+                <td>Matt Scott</td>
+                <td>187</td>
+                <td>93</td>
+                <td>94</td>
+                <td>49.7%</td>
+                <td>50.3%</td>
+            </tr>
+            <tr>
+                <td>Joe Monette</td>
+                <td>368</td>
+                <td>186</td>
+                <td>182</td>
+                <td>50.5%</td>
+                <td>49.5</td>
+            </tr>
+            <tr>
+                <td>Dave Lewis</td>
+                <td>289</td>
+                <td>146</td>
+                <td>143</td>
+                <td>50.5%</td>
+                <td>49.5%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Top 5 Games With Most Pims:</p>
+    <ol>
+        <li>Jan 20: London Knights vs Kitchener Rangers - 118 pims <a href="{{createLink('ohl', 26895)}}" target="_blank">GameSheet</a></li>
+        <li>Feb 2: Brantford Bulldogs vs Sudbury Wolves - 92 pims <a href="{{createLink('ohl', 26937)}}" target="_blank">GameSheet</a></li>
+        <li>Jan 14: Oshawa Generals vs Kingston Frontenacs - 80 pims <a href="{{createLink('ohl', 26875)}}" target="_blank">GameSheet</a></li>
+        <li>Mar 21: Peterborough Petes vs Ottawa 67's - 77 pims <a href="{{createLink('ohl', 27137)}}" target="_blank">GameSheet</a></li>
+        <li>Feb 9: Ottawa 67's vs Peterborough Petes - 68 pims <a href="{{createLink('ohl', 26969)}}" target="_blank">GameSheet</a></li>
+    </ol>
+
+    <p>Top 5 Longest Games:</p>
+    <ol>
+        <li>Feb 3: 2:54 - Owen Sound Attack vs London Knights <a href="{{createLink('ohl', 26947)}}" target="_blank">GameSheet</a></li>
+        <li>Jan 20: 2:53 - London Knights vs Kitchener Rangers <a href="{{createLink('ohl', 26895)}}" target="_blank">GameSheet</a></li>
+        <li>Jan 14: 2:52 - Oshawa Generals vs Kingston Frontenacs <a href="{{createLink('ohl', 26875)}}" target="_blank">GameSheet</a></li>
+        <li>Nov 1: 2:51 - Brantford Bulldogs vs Guelph Storm <a href="{{createLink('ohl', 26600)}}" target="_blank">GameSheet</a></li>
+        <li>Feb 24: 2:48 - Barrie Colts vs Mississauga Steelheads <a href="{{createLink('ohl', 27031)}}" target="_blank">GameSheet</a></li>
+    </ol>
+
+    <p>All official's game counts:</p>
+    <div class="toggleStyle" (click)="toggleStatsDiv('officialsTable')" style="cursor: pointer;">Toggle Game Counts</div>
+    <table class="faceoffTable" *ngIf="officialsTableVisible">
+    <thead class="tableHeader">
+      <tr class="headerRow">
+        <th class="tableHeaderPadding">Name</th>
+        <th class="sortable" (click)="toggleSortByRefCount()">Games Worked</th>
+      </tr>
+    </thead>
+    <tbody class="tableBody">
+      <tr *ngFor="let ref of allRefs">
+        <td class="tableHeaderPadding2">{{ ref.name }}</td>
+        <td>{{ ref.games_worked }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+    <p>All Referees bias stats:</p>
+    <div class="toggleStyle" (click)="toggleStatsDiv('biasTable')" style="cursor: pointer;">Toggle Ref Bias Info</div>
+
+    <div *ngIf="biasTableVisible">
+        <h5>Some extra info:</h5>
+        <p>
+            Legend:
+        </p>
+        <ul>
+            <li>PP = Power Play. This means a penalty that was assessed that resulted in a team being provided a man advantage</li>
+            <li>Total = Total ammount of PPs an ref assessed through all their games</li>
+            <li>H PPs = Total home PPs this ref assessed through all their games</li>
+            <li>V PPs = Total visitor PPs this ref assessed through all their games</li>
+            <li>H % / V % = This represents the percentage of time through all their games the ref assessed penalties to home or visitor team</li>
+        </ul>
+    </div>
+
+    <table class="faceoffTable" *ngIf="biasTableVisible">
+    <thead class="tableHeader">
+      <tr class="headerRow">
+        <th class="tableHeaderPadding">Name</th>
+        <th class="sortable" (click)="toggleSortByTotal()">Total</th>
+        <th>H PPs</th>
+        <th>V PPs</th>
+        <th class="sortable" (click)="toggleSortByHPercentage()">H %</th>
+        <th class="sortable" (click)="toggleSortByVPercentage()">V %</th>
+      </tr>
+    </thead>
+    <tbody class="tableBody">
+      <tr *ngFor="let player of players">
+        <td class="tableHeaderPadding2">{{ player.name }}</td>
+        <td>{{ player.total }}</td>
+        <td>{{ player.horizontalPPs }}</td>
+        <td>{{ player.verticalPPs }}</td>
+        <td>{{ player.horizontalPercentage | decimalpercentpipe }}</td>
+        <td>{{ player.verticalPercentage | decimalpercentpipe }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,13 @@
+<div class="form">
+  <input type="text" [(ngModel)]="email" placeholder="Email">
+  <input type="password" [(ngModel)]="password" placeholder="Password">
+  <input type="text" [(ngModel)]="firstName" placeholder="First Name">
+  <input type="text" [(ngModel)]="lastName" placeholder="Last Name">
+  <button (click)="createNewUser()">Create Account</button>
+</div>
+
+
+
+<div>
+  <app-info-modal *ngIf="modalService.shouldShowModal()"></app-info-modal>
+</div>

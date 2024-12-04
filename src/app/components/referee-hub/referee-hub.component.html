@@ -1,0 +1,36 @@
+<div class="refSearch">
+    <input name="search"  type="search" (focus)="showSearch = true" placeholder="Search for refs" autocomplete="off" [(ngModel)]="term">
+    <div class="refSearchResults" *ngIf="showSearch && term != ''">
+        <table style="width: 100%">
+            <tbody>
+                <tr *ngFor="let ref of allRefs | async | officialfilter:term">
+                    <td><a routerLink="/official-page/{{ref.first_name}}_{{ref.last_name}}" (click)="clearSerach()">{{ref.first_name}}</a></td>
+                    <td><a routerLink="/official-page/{{ref.first_name}}_{{ref.last_name}}" (click)="clearSerach()">{{ref.last_name}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="sortingTop">
+    <span>Enter any number: <input type="number" [(ngModel)]="numOfRefs"></span>
+    <button (click)="getOfficials()">Sort</button>
+    <p>Top {{numOfRefsDisplay}} officials by number of games:</p>
+</div>
+<div class="topTable">
+    <table>
+        <thead>
+            <tr style="height: 55px;">
+                <th class="rank">Rank</th>
+                <th class="name">Name</th>
+                <th style="width: 160px; text-align:center;">Number of games</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ref of topRefs; let i=index;" style="height: 35px;">
+                <td style="text-align: center;">{{i + 1}}</td>
+                <td style="padding: 7px 10px 7px 0px;"><a routerLink="/official-page/{{ref.first_name}}_{{ref.last_name}}">{{ref.first_name}} {{ref.last_name}}</a></td>
+                <td style="text-align: center;">{{ref.total_games}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

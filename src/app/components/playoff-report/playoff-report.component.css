@@ -1,0 +1,87 @@
+button {
+	margin-left: 10px;
+	background-color: #fc5903;
+	padding: 5px;
+	width: 100px;
+	border: 1.5px solid #c3c3c3;
+    color: #313131;
+}
+
+.button-default {
+	margin-left: 10px;
+	background-color: #fc5903;
+	padding: 5px;
+	width: 100px;
+	border: 2px solid #c3c3c3;
+    color: #313131;
+    font-weight: bolder;
+}
+
+.button-clicked {
+	margin-left: 10px;
+	background-color: #fc5903;
+	padding: 5px;
+	width: 100px;
+	border: 2px solid #8c3701;
+    font-weight: bolder;
+    color: #313131;
+}
+
+p {
+	margin-bottom: 8px;
+}
+
+ol {
+	margin-bottom: 8px;
+}
+
+.notifiy {
+	font-size: 14px;
+}
+
+.leagueButtons {
+	display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.faceoffTable {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.tableHeader {
+	border: solid 1px #fc5903;
+}
+
+.headerRow th {
+	border: solid 1px #fc5903;
+}
+
+.sortable {
+	color: #fc5903;
+	text-decoration: underline;
+}
+
+.tableBody tr {
+	border: 1px solid #fc5903;
+}
+
+.tableHeaderPadding {
+	padding: 8px;
+}
+
+.tableHeaderPadding2 {
+	padding: 4px;
+}
+
+.toggleStyle {
+	margin-bottom: 10px;
+	color: #fc5903;
+	text-decoration: underline;
+}
+
+.tableBodyPlayoffs tr,td {
+	border: 1px solid #fc5903;
+}

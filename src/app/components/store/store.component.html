@@ -1,0 +1,21 @@
+<div>
+	<h3>Welcome to the Whosreffing store!</h3>
+
+	<p>Please note that all items listed are subject to slight changes as we are still working on sourcing our provider. Additionally, many items are available in a variety of colors.</p>
+	<p>For shirts, hoodies, jackets, etc... you'll be able to personalize your order by adding your name and number.</p>
+	<p>If you're interested, fill out the Google Form located at the bottom of this page. We'll keep you informed about the official store launch!</p>
+
+</div>
+
+<div class="store-grid">
+    <div class="store-item" *ngFor="let item of storeItems">
+        <div #imageContainer class="image-container">
+            <img [src]="item.imageSrc">
+        </div>
+        <p>{{ item.name }}</p>
+    </div>
+</div>
+
+<div class="mendingForm">
+	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-SUN_-k_oz_5z9sru3Ni3DiMk101S_K9-C866QhZYQutS0w/viewform?embedded=true" frameborder="0">Loading…</iframe>
+</div>

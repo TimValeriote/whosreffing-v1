@@ -1,0 +1,59 @@
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.store-grid p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.store-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-container {
+    flex-grow: 1;
+    overflow: hidden; /* Ensure the image doesn't overflow its container */
+}
+
+.store-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+iframe {
+	width: 100%;
+	height: 800px;
+}
+
+.mendingForm {
+	height: 600px;
+	width: 50%;
+	display: inline;
+}
+
+@media (max-width: 769px) {
+	iframe  {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.mendingForm {
+		padding-top: 20px;
+		width: 100%;
+		height: 500px;
+		display: block;
+	}
+
+	.ideasForm {
+		width: 100%;
+		height: 500px;
+		display: block;
+	}
+}

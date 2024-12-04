@@ -1,0 +1,60 @@
+<div *ngIf="noGames" style="text-align: center;">
+  <h4>No games today</h4>
+</div>
+<!--<div class="report">
+  <p>Checkout our new post season report <a routerLink="/post-season-report">here</a></p>
+  <p>(OHL now available)</p>
+</div>-->
+<div class="store-report">
+  <p><a href="https://whosreffing.deco-apparel.com/">WHOSREFFING STORE</a> IS NOW LIVE</p>
+  <p>If you had previously created an account here, you WON'T be required to use that account on the store.</p>
+</div>
+<ng-container *ngIf="isDesktop">
+  <div class="store-report">
+    <p>Follow us on instagram: <a href="https://www.instagram.com/whosreffing">instagram.com/whosreffing</a></p>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!isDesktop">
+  <div class="store-report">
+    <p>Follow us on instagram: <a href="instagram://user?username=whosreffing">instagram.com/whosreffing</a></p>
+  </div>
+</ng-container>
+
+
+<!--<div class="report">
+  <p>In preparation for store creation, feel free to register <a routerLink="/register">here</a>.</p>
+</div>-->
+<ng-container *ngFor="let league of activeLeagues$ | async">
+  <div class="gamesListHeader">
+    <h4 class="gameHeader">
+      <ng-container *ngIf="league.id == chlString">Memorial Cup </ng-container><ng-container *ngIf="league.id != chlString">{{league.id}}</ng-container> <ng-container *ngIf="league.isPlayoff"> Playoffs</ng-container> games:
+    </h4>
+    <a class="collapseTag" href="#{{league.id}}games" (click)="updateBubbleMap(league.id)" data-bs-toggle="collapse" role="button">&#8650;</a>
+  </div>
+  <div *ngIf="checkForBubble(league.id)">
+    <a href="#{{league.id}}games" (click)="updateBubbleMap(league.id)" data-bs-toggle="collapse" role="button"><img class="textbubble" src="https://whosreffing-assets.s3.amazonaws.com/icons/textbuddle-whosreffing.png"></a>
+  </div>
+  <div id="{{league.id}}games" name="collapseDiv" class="collapse" [ngClass]="{'show': isDesktop}">
+    <div class="gamesList">
+      <div *ngFor="let game of (activeGamesMap.get(league.id) | async)">
+        <h6>{{game.visiting_team.city}} vs {{game.home_team.city}} @ {{game.venue}} ({{game.date.toDate() | date:'shortTime':'UTC'}}) <span style="margin: 0px 0px 5px;">
+          <ng-container *ngIf="game.is_playoff && showPlayoffGameNumber(league.id)">
+            <span style="padding-right: 5px">(Game {{game.game_number}} of 7)</span>
+          </ng-container> 
+            <a href="{{createLink(league.id, game.id)}}" target="_blank">GameSheet</a>
+        </span></h6>
+
+        <div *ngIf="hasOfficials(game)">
+          <div *ngFor="let ref of game.officials">
+            <p class="indivRef">{{ref.official_type}}: {{ref.first_name}} {{ref.last_name}}</p>
+          </div>
+        </div>
+        <div *ngIf="!hasOfficials(game)">
+          <p>No refs available for this game</p>
+        </div>
+      <hr class="seperator">
+      </div>
+    </div>
+  </div>
+</ng-container>

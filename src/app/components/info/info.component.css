@@ -1,0 +1,36 @@
+.ideasForm {
+	height: 600px;
+	width: 50%;
+	display: inline;
+}
+
+iframe {
+	width: 50%;
+	height: 600px;
+}
+
+.mendingForm {
+	height: 600px;
+	width: 50%;
+	display: inline;
+}
+
+@media (max-width: 769px) {
+	iframe  {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.mendingForm {
+		margin-top: 100px;
+		padding-top: 20px;
+		width: 100%;
+		height: 500px;
+		display: block;
+	}
+
+	.ideasForm {
+		width: 100%;
+		height: 500px;
+		display: block;
+	}
+}

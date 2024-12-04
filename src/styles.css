@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+.siteContent {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.allContent {
+	background-color: #313131;
+	color: #c3c3c3;
+}
+
+
+.newsFooter {
+	display: flex;
+	align-items : center;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+  	left: 0;
+   	background-color: #fc5903;
+   	font-size: 25px;
+   	height: auto;
+   	justify-content: center;
+}
+
+
+@media (max-width: 769px) {
+	.siteContent  {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.newsFooter {
+		font-size: 14px;
+		padding: 5px;
+	}
+}
+
+nav {
+	background-color: #fc5903 !important;
+	margin-bottom: 15px;
+}
+
+.nav-link {
+	color: #111111;
+	font-weight: bold;
+}
+
+.nav-link:hover {
+	color: #3a3a3a;
+}
+
+.warningText {
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+

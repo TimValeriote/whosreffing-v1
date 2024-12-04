@@ -1,0 +1,38 @@
+<div *ngIf="official$ | async as ref" class="refInfo">
+  <div class="refNamePhoto">
+    <img [src]="refPhoto" (error)="setDefaultPic()" class="refInfoPhoto">
+    <div class="refTextInfo">
+      <h2>{{ref.first_name}} {{ref.last_name}}</h2>
+      <p>Total games worked: {{ref.total_games}}</p>
+      <h5>Leagues worked in:</h5>
+      <ng-container *ngFor="let league of workedLeagues$ | async">
+        <span style="margin: 0px 0px 5px;">{{league.id}}   </span>
+      </ng-container>
+
+    </div>
+  </div>
+</div>
+<p class="news">Submit a photo <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1Q0IBvT99vcRHUZo8mv2AUvZNoPbpk2oRR59tIRKQx21BHw/viewform?usp=sf_link" target="_blank">here</a></p>
+<ng-container *ngFor="let league of workedLeagues$ | async">
+  <div class="gamesListHeader">
+    <h4 class="gameHeader">{{league.id}} games ({{numOfGames.get(league.id)}}):</h4>
+    <a class="collapseTag" href="#{{league.id}}games" data-bs-toggle="collapse" role="button">&#8650;</a>
+  </div>
+  
+  <div id="{{league.id}}games" class="collapse show">
+    <div class="gamesList">
+      <div style="margin-bottom: 15px;" *ngFor="let game of (workedGamesMap.get(league.id) | async)">
+        <h6>{{game.visiting_team.city}} vs {{game.home_team.city}}, <span style="margin: 0px 0px 5px; font-weight: bold;">{{game.date.toDate() | date:'mediumDate'}} (<a href="{{createLink(league.id, game.id)}}" target="_blank">Game Sheet</a>)</span></h6>
+        
+        <div *ngIf="hasOfficials(game)">
+          <div *ngFor="let ref of game.officials">
+            <p class="indivRef">{{ref.official_type}}: {{ref.first_name}} {{ref.last_name}}</p>
+          </div>
+        </div>
+        <div *ngIf="!hasOfficials(game)">
+          <p>No refs available for this game</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
